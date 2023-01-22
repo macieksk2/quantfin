@@ -12,6 +12,7 @@ import pickle
 import math
 from functools import reduce
 from sklearn.decomposition import PCA, KernelPCA
+from sklearn.preprocessing import scale, StandardScaler
 ############################################### FUNCTIONS ############################################################
 # remove timestamp
 def rem_time(d):
@@ -213,13 +214,36 @@ plot_pcs_mrg_yrs(no_years_ = 4)
 plot_pcs_mrg_yrs(no_years_ = 5)
 # no years = 6
 plot_pcs_mrg_yrs(no_years_ = 6)
+
+# FIT
+model_fit = pd.DataFrame(0, index=np.arange(len(df)), columns=df.columns)
+model_fit.index = df.index
+pca_comps = pca_thr_comp.components_[:3,:]
+pca_comps = pd.DataFrame(pca_comps)
+pca_comps.columns = df.columns
+for i in range(df.shape[0]):
+    for j in df.columns:
+        model_fit[j].iloc[i] = pca.iloc[i][0] * pca_comps.iloc[0][j] + \
+                               pca.iloc[i][1] * pca_comps.iloc[1][j] + \
+                               pca.iloc[i][2] * pca_comps.iloc[2][j]
+
+# Visualizing the values constructed from PCA
+plt.figure(figsize=(20,15))
+plt.plot(model_fit.index, df)
+plt.xlim(model_fit.index.min(), model_fit.index.max())
+# plt.ylim(0, 0.1)
+plt.axhline(y=0,c="grey",linewidth=0.5,zorder=0)
+for i in range(model_fit.index.min().year, model_fit.index.max().year + 1):
+    plt.axvline(x = model_fit.index[model_fit.index.searchsorted(pd.datetime(i,1,1)) - 1],
+                c="grey", linewidth=0.5, zorder=0)
+plt.show()
 ############################################### KERNEL PCA ############################################################
 # calculate the PCA (Eigenvectors & Eigenvalues of the covariance matrix)
 kern_pca = KernelPCA(n_components=3,
                  kernel='rbf',
                  gamma = 4, # default 1/n_features
                  kernel_params=None,
-                 fit_inverse_transform=False,
+                 fit_inverse_transform=True,
                  eigen_solver='auto',
                  tol=0,
                  max_iter=None)
@@ -234,3 +258,26 @@ plot_kernel_pca_mrg_years(no_years_ = 1, pc_1_ = 0, pc_2_ = 1)
 plot_kernel_pca_mrg_years(no_years_ = 1, pc_1_ = 0, pc_2_ = 2)
 plot_kernel_pca_mrg_years(no_years_ = 1, pc_1_ = 1, pc_2_ = 2)
 
+
+############################################### CHECK THE FIT ############################################################
+trans_fit = pd.DataFrame(kern_pca.X_transformed_fit_)
+trans_fit.index = df.index
+
+# PC1: Level
+fig = plt.figure(figsize=(16,10))
+plt.title('First PCA component vs level of 1M US TY times 5')
+plt.plot(trans_fit[0])
+plt.plot(df["1M"] * 5)
+plt.show()
+# PC2: Slope
+fig = plt.figure(figsize=(16,10))
+plt.title('Second PCA component vs 20Y / 3M US TY Spread times 3')
+plt.plot(trans_fit[1])
+plt.plot((df["20Y"] - df["1M"]) * 2)
+plt.show()
+# PC3: Curvature
+fig = plt.figure(figsize=(16,10))
+plt.title('Thrid PCA component vs 2 * 5Y US TY - 20Y US TY - 6M US TY')
+plt.plot(trans_fit[2])
+plt.plot(- (df["20Y"] + df["6M"] - 2 * df["5Y"]))
+plt.show()
