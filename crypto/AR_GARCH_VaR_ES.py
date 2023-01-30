@@ -15,7 +15,7 @@ import scipy.optimize as opt
 from scipy import stats
 
 ### INPUT (from Kaggle)
-dir_ = r"\\emea.ad.jpmorganchase.com\\home\\xbus\\xb\\emvdihome76\\D628748\\HomeData\\jpmDesk\\Desktop\\Projects\\crypto\\data"
+dir_ = r"...\\crypto\\data"
 os.chdir(dir_)
 # Get all files (crypto gistoricals) from the directory
 files = os.listdir(dir_)
