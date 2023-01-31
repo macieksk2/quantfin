@@ -2,6 +2,9 @@
 """
 Assessing the Risk Characteristics of the Cryptocurrency Market: A GARCH-EVT-Copula Approach
 https://www.mdpi.com/1911-8074/15/8/346
+
+Gaussian / t Copula
+https://www.kaggle.com/code/liamhealy/copulas-in-python
 """
 import os
 import pandas as pd
@@ -195,8 +198,7 @@ for c in ['BTC_lgwth', "ETH_lgwth"]:#merged_to_descr.columns:
     var_99_estim.append(VaR_hat_99)
     es_95_estim.append(ES_hat_95)
     es_99_estim.append(ES_hat_99)
-    
-    
+       
 ### PORTFOLIO
 # Start with BTC: 70%, ETH: 30%
 # Later include other cryptos and calc weights based on current market cap
@@ -205,5 +207,90 @@ w = [0.7, 0.3]
 port_hist_ret = w[0] * merged["BTC_lgwth"] + w[1] * merged["ETH_lgwth"]
 port_hist_ret = port_hist_ret.dropna()
 port_hist_cum_ret = np.cumprod(np.exp(port_hist_ret[-252:]))
-port_hist_cum_ret.plot(rot=45)
-#  fit a t-Student Copula to the daily logarithmic returns to estimate their joint density function
+port_hist_cum_ret.plot(rot = 45)
+
+# MC simulation based on estimated mus, sigmas and phos
+mu1 = np.mean(merged["BTC_lgwth"])
+sigma1 = np.std(merged["BTC_lgwth"])
+mu2 = np.mean(merged["ETH_lgwth"])
+sigma2 = np.std(merged["ETH_lgwth"])
+comb_dataset = merged[["BTC_lgwth", 'ETH_lgwth']].dropna()
+corr_ = np.corrcoef([comb_dataset['BTC_lgwth'], comb_dataset['ETH_lgwth']])
+np.random.seed(10)
+
+# Gaussian / t copula
+def copula_gaussian(n, correlation, seed, mu1 = mu1, sigma1 = sigma1, mu2 = mu2, sigma2 = sigma2):
+    
+    ''' Normally distributed random variates X and Y with correlation 'p'
+    '''
+    
+    # Independed Normal distributions
+    Z_x = sp.stats.norm.rvs(loc=mu1, scale=sigma1, size=n, random_state=seed)
+    Z_y = sp.stats.norm.rvs(loc=mu2, scale=sigma2, size=n, random_state=seed*2)
+    Z = np.matrix([Z_x, Z_y])
+    
+    # Construct the correlation matrix and Cholesky Decomposition
+    rho = np.matrix([[1, correlation], [correlation, 1]])
+    cholesky = np.linalg.cholesky(rho)
+    
+    # Apply Cholesky and extract X and Y
+    Z_XY = cholesky * Z
+    X = np.array(Z_XY[0,:]).flatten()
+    Y = np.array(Z_XY[1,:]).flatten()
+    
+    # CDF
+    X_cdf = sp.stats.norm.cdf(X, loc=0, scale=1)
+    Y_cdf = sp.stats.norm.cdf(Y, loc=0, scale=1)
+    
+    return X, Y, X_cdf, Y_cdf
+
+def copula_t(n, correlation, df, seed, mu1 = mu1, sigma1 = sigma1, mu2 = mu2, sigma2 = sigma2):
+    
+    ''' Student's t distributed random variates t_X and t_Y with correlation 'p'
+        and degrees of freedom 'df'
+    '''
+    
+    # Gaussian Copula
+    Zx, Zy, _, _ = copula_gaussian(n=n, correlation=correlation, seed=seed, mu1 = mu1, sigma1 = sigma1, mu2 = mu2, sigma2 = sigma2)
+    
+    # Chi Squared Sample
+    np.random.seed(seed)
+    ChiSquared = np.random.chisquare(df=df, size=n)
+
+    # Stident's t distributed random variables
+    X = Zx / (np.sqrt(ChiSquared / df))
+    Y = Zy / (np.sqrt(ChiSquared / df))
+    
+    # CDF
+    X_cdf = sp.stats.t.cdf(X, df=df, loc=mu1, scale=sigma1)
+    Y_cdf = sp.stats.t.cdf(Y, df=df, loc=mu2, scale=sigma2)
+    
+    return X, Y, X_cdf, Y_cdf
+
+n=10000
+correlation = np.corrcoef([comb_dataset['BTC_lgwth'], comb_dataset['ETH_lgwth']])[1][0]
+df = 1
+
+X, Y, X_cdf, Y_cdf  = copula_gaussian(n=n, correlation=correlation, seed=123, mu1 = mu1, sigma1 = sigma1, mu2 = mu2, sigma2 = sigma2)
+Tx, Ty, Tx_cdf, Ty_cdf  = copula_t(n=n, correlation=correlation, df=df, seed=123, mu1 = mu1, sigma1 = sigma1, mu2 = mu2, sigma2 = sigma2)
+
+### Plot the sampled PDF and CDF against the theoretical distribution
+c1 = "red"
+fig, ax = plt.subplots(figsize=(16,6), nrows=1, ncols=2)
+plt.suptitle(r"Gaussian Copula: $\rho={}$".format(correlation), fontsize=16)
+ax[0].scatter(X, Y, color=c1, alpha=0.2, label="Joint Distribution")
+ax[0].set(title="Joint Distribution Scatter Plot", xlabel=r"$X$", ylabel=r"$Y$", xlim=[-0.5,0.5], ylim=[-0.5,0.5])
+
+ax[1].scatter(X_cdf, Y_cdf, color=c1, alpha=0.2, label="Joint Distribution")
+ax[1].set(title="Joint Distribution CDF Scatter Plot", xlabel=r"CDF of X", ylabel=r"CDF of Y")
+plt.show()
+
+### Plot the sampled PDF and CDF against the theoretical distribution
+fig, ax = plt.subplots(figsize=(16,6), nrows=1, ncols=2)
+plt.suptitle(r"Student's t-Copula: $\rho={}$, $df={}$".format(correlation,df), fontsize=16)
+ax[0].scatter(Tx, Ty, color=c1, alpha=0.2, label="Joint Distribution")
+ax[0].set(title="Joint Distribution Scatter Plot", xlabel=r"$X$", ylabel=r"$Y$", xlim=[-1,1], ylim=[-1,1])
+
+ax[1].scatter(Tx_cdf, Ty_cdf, color=c1, alpha=0.2, label="Joint Distribution")
+ax[1].set(title="Joint Distribution CDF Scatter Plot", xlabel=r"CDF of X", ylabel=r"CDF of Y")
+plt.show()
