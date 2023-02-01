@@ -5,5 +5,6 @@ Python / R scripts used to solve various issues in Quant Finance/Market Risk spa
 2. PCA run to decompose US TY Yield Curve
 3. Martingale test
 4. Implied volatility calculation
-5. Interest rate modelling (Hull-White)
-6. Modelling Jump processes (Black Scholes, Poisson)
+5. Volatiltiy modelling (Heston model)
+6. Interest rate modelling (Hull-White)
+7. Modelling Jump processes (Black Scholes, Poisson)
