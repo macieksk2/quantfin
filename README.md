@@ -8,3 +8,4 @@ Python / R scripts used to solve various issues in Quant Finance/Market Risk spa
 5. Volatiltiy modelling (Heston model)
 6. Interest rate modelling (Hull-White)
 7. Modelling Jump processes (Black Scholes, Poisson)
+8. Exotic derivatives valuation (Asian, barrier options)
