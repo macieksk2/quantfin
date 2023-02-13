@@ -1,4 +1,4 @@
-The folder contains data on historical daily US Treasury Yields for the follwoign maturities:
+The folder contains data on historical daily US Treasury Yields for the following maturities:
 - 1M
 - 3M
 - 6M
