@@ -21,7 +21,7 @@ np.random.seed(0)
 # This rates can be obtained from prices of zero-coupons bond
  
 #### INPUT
-directory_     = 'C:\\Users\\macie\\OneDrive\\Desktop\\interviews\\Standard Chartered'
+directory_     = '...\\analysis\\'
 data_filename_ = 'hjm_data.csv'
 
 class InputHandling():
