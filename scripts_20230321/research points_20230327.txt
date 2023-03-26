@@ -1,4 +1,4 @@
-Linki / pliki na 26.03.2023:
+Linki / pliki na 27.03.2023:
 
 1. Przejrzec kod / wylapac algorytm i wazne funkcje:
 - 2.2 Exotic options
@@ -16,10 +16,17 @@ https://ultimabi.uk/ultibi-frtb-book/fx.html
 3. FRTB implementacja (efektywna symulacja):
 - https://education.wbstraining.com/pluginfile.php/7297/mod_resource/content/2/Webinar%20FRTB%20V0.5.pdf
 - http://ta.twi.tudelft.nl/users/vuik/numanal/nayak_afst.pdf
+- https://apps.dtic.mil/sti/pdfs/ADA621501.pdf (liczba symulacji MC)
+- https://financetrainingcourse.com/education/2012/06/monte-carlo-simulation-variance-reduction-procedures-antithetic-variable-technique-quasi-random-sequences/ (symluacje MC)
 
 4. FRTB regulacje:
 - http://www.thierry-roncalli.com/download/FRM-Lectures.pdf (do slajdu 166)
 - https://repositorio.iscte-iul.pt/bitstream/10071/21854/1/Master_Marta_Balseiro_Rodrigues.pdf
+- https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3014533 (anomalie w FRTB)
+- https://www.fimarkets.com/pagesen/frtb-standardised-model-approach.php
+- https://www.researchgate.net/publication/330988062_The_impact_of_the_Fundamental_Review_of_the_Trading_Book_A_preliminary_assessment_on_a_stylized_portfolio
+- https://www.cefpro.com/wp-content/uploads/2019/07/Pushpak_Tripathi.pdf
+- https://www.cefpro.com/wp-content/uploads/2017/11/13.35-Sylvain-Martinez.pdf
 
 5. Derywaty / pricing / smile:
 -  https://www.researchgate.net/publication/226498536_Delta_hedging_with_the_smile
