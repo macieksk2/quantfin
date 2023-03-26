@@ -1,0 +1,42 @@
+Linki / pliki na 26.03.2023:
+
+1. Przejrzec kod / wylapac algorytm i wazne funkcje:
+- 2.2 Exotic options
+- 2.3 American Options
+- 4.2 Volatility smile and model calibration
+- 6.1 Ornstein-Uhlenbeck process and applications
+- A.1 Solution of linear equations
+- A.2 Optimize and speed up the code. (SOR algorithm, Cython and C)
+
+2. Pytania Python:
+https://intellipaat.com/blog/interview-question/python-interview-questions/
+https://quantpy.com.au/category/stochastic-volatility-models/
+https://ultimabi.uk/ultibi-frtb-book/fx.html
+
+3. FRTB implementacja (efektywna symulacja):
+- https://education.wbstraining.com/pluginfile.php/7297/mod_resource/content/2/Webinar%20FRTB%20V0.5.pdf
+- http://ta.twi.tudelft.nl/users/vuik/numanal/nayak_afst.pdf
+
+4. FRTB regulacje:
+- http://www.thierry-roncalli.com/download/FRM-Lectures.pdf (do slajdu 166)
+- https://repositorio.iscte-iul.pt/bitstream/10071/21854/1/Master_Marta_Balseiro_Rodrigues.pdf
+
+5. Derywaty / pricing / smile:
+-  https://www.researchgate.net/publication/226498536_Delta_hedging_with_the_smile
+- An Analysis of Pricing Methods for Baskets Options
+  Martin Krekel, Johan de Kock, Ralf Korn, Tin-Kwai Man
+- https://bookdown.org/maxime_debellefroid/MyBook/variance-swaps.html
+- https://shiny.derivativesacademy.com/app/classicoptions
+- https://quant.opengamma.io/FourierPricing.pdf
+
+6. Stoch Analiza / symulacje:
+- https://en.wikipedia.org/wiki/It%C3%B4_calculus
+- https://en.wikipedia.org/wiki/Euler%E2%80%93Maruyama_method
+- https://en.wikipedia.org/wiki/Milstein_method
+- https://en.wikipedia.org/wiki/Control_variates
+- https://en.wikipedia.org/wiki/Antithetic_variates
+- https://en.wikipedia.org/wiki/Successive_over-relaxation
+
+7. Maria:
+- https://www.researchgate.net/publication/272039183_A_new_parameterization_for_the_drift-free_simulation_in_the_Libor_Market_Model
+- https://www.researchgate.net/publication/359026337_A_Survey_on_Quantum_Computational_FinanceA_Survey_on_Quantum_Computational_Finance_for_Derivatives_Pricing_and_VaR
