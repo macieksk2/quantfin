@@ -177,3 +177,44 @@ ZTEK	ZENTEK LTD	$1.54	57	$4.31	-64.29%	3.94x	N/A	-770.00x	7.88x	0.29x	-$12.47M	-
 UUUU	ENERGY FUELS INC	$5.96	57	$520.93	-98.86%	13.55x	N/A	32.22x	2.65x	0.00x	-$14.04M	-1.49%	$355.03M	lut.25	$881.82M	gru.51	
 NISN	NISUN INTERNATIONAL ENTERPRISE DEVELOPMENT GROUP CO LTD	$0.51	71	$19.21	-97.35%	0.40x	N/A	0.09x	0.11x	0.02x	-$20.28M	-99.61%	$186.93M	kwi.68	-$58.44M	-1.25	
 ORGN	ORIGIN MATERIALS INC	$4.18	86	$8.94	-53.22%	7.33x	-9.09x	N/A	1.59x	0.28x	-$110.03M	-19.14%					
+
+### FILTER
+Criterium 	RUN_1
+Stocks: 	['WIRE', 'NTR', 'UMC', 'SIMO', 'SWKS']
+Criterium 	RUN_2
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'SIMO', 'SWKS', 'PLAB']
+Criterium 	RUN_3
+Stocks: 	['NTR', 'SWKS', 'SIMO']
+Criterium 	RUN_4
+Stocks: 	['SIMO', 'NTR', 'UMC', 'SWKS']
+Criterium 	RUN_5
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'RUSHA', 'EPSN', 'IMKTA', 'SIMO', 'SWKS', 'ATKR']
+Criterium 	RUN_6
+Stocks: 	[]
+Criterium 	RUN_7
+Stocks: 	['NTR', 'SIMO']
+Criterium 	RUN_8
+Stocks: 	['SIMO']
+Criterium 	RUN_9
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'RUSHA', 'EPSN', 'SIMO', 'ATKR']
+Criterium 	P/E = 10
+Stocks: 	['WIRE', 'NTR', 'UMC', 'CHRD', 'RUSHA', 'EPSN', 'IMKTA', 'PLAB', 'ATKR']
+Criterium 	P/E = 15
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'CHRD', 'RUSHA', 'EPSN', 'IMKTA', 'SIMO', 'SWKS', 'PLAB', 'ATKR']
+Criterium 	P/E = 20
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'CHRD', 'RUSHA', 'EPSN', 'IMKTA', 'SIMO', 'SWKS', 'PLAB', 'ATKR']
+Criterium 	P/B = 1
+Stocks: 	['PLAB']
+Criterium 	P/B = 1.5
+Stocks: 	['HUN', 'NTR', 'CHRD', 'EPSN', 'IMKTA', 'PLAB']
+Criterium 	P/B = 2
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'CHRD', 'RUSHA', 'EPSN', 'IMKTA', 'PLAB']
+Criterium 	P/S = 1
+Stocks: 	['HUN', 'IMKTA', 'NTR', 'RUSHA']
+Criterium 	P/S = 3
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'CHRD', 'RUSHA', 'EPSN', 'IMKTA', 'SIMO', 'PLAB', 'ATKR']
+Criterium 	P/S = 5
+Stocks: 	['WIRE', 'HUN', 'NTR', 'UMC', 'CHRD', 'RUSHA', 'EPSN', 'IMKTA', 'SIMO', 'SWKS', 'PLAB', 'ATKR']
+Criterium 	NCAV
+Stocks: 	[]
+Potential candidates 	['ATKR', 'CHRD', 'EPSN', 'HUN', 'IMKTA', 'NTR', 'PLAB', 'RUSHA', 'SIMO', 'SWKS', 'UMC', 'WIRE']
