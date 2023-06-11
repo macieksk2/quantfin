@@ -1,0 +1,66 @@
+128	Verizon	Technology	Telecommunications	US		Sven		12		39	0	18,5	-9	FALSE	FALSE	FALSE							
+149	Apple	Technology	Conglomerate	US		Jimmy / Sven		10		165	90	142	66	FALSE	FALSE	FALSE							
+199	Microsoft	Technology	Conglomerate	US		Jimmy		8		286	142	213	108	FALSE	FALSE	FALSE							
+216	Walgreens	Health	Retail	US		Jimmy		3						FALSE	FALSE	FALSE							
+220	Amazon	Retail	Conglomerate	US		Jimmy		13		102	28,5	50,5	18	FALSE	FALSE	FALSE							
+224	Deere	Industrials	Heavy Equipment	US		FAST GRAPHS		3						FALSE	FALSE	FALSE							
+240	Broadcom	Semiconductors	 Semiconductor and infrastructure software products	US		FAST GRAPHS / Jimmy		4		619	776	1252	566	TRUE	TRUE	FALSE							
+249	CVS	Health	Retail	US		Jimmy		5		75	97	161	62	TRUE	TRUE	FALSE							
+253	Flagship	REIT	Trailer Parks	US		Own research		1						FALSE	FALSE	FALSE							
+272	Archer Daniels Midland	Consumer Goods	Conglomerate	US		Sven		3		82	78	121	56,5	FALSE	TRUE	FALSE							
+273	Newmont	Mining	Gold	US	Cyclical	Sven		2		49,5	66	98	50	TRUE	TRUE	TRUE							
+286	Celanese Corporation	Industrials	Chemicals	US		Own research		3		111	119	223	65	TRUE	TRUE	FALSE							
+296	Paramount	Technology	Mass Media/Streaming	US		Joseph Hogue		5		21,58	60	100	41	TRUE	TRUE	TRUE							
+301	Freeport McMoran	Mining	Copper	US	Cyclical	Isfaaq		1		42	37	54	28	FALSE	TRUE	FALSE							
+346	Medical Properties Trust	REIT	Hospitals	US		FAST GRAPHS		7		8,3	18,5	38	8,8	TRUE	TRUE	TRUE							
+348	AMD	Semiconductors	CPU / Microprocessors / Flash memory	US	Growth	Jimmy		2		92	77	135	55	FALSE	TRUE	FALSE							
+357	LyondellBasell Industries	Industrials	Chemicals	EMEA		Jimmy		2		97	157	256	116	TRUE	TRUE	TRUE							
+358	Prosus	Technology		EMEA		Isfaaq		5		15	41	62	32	TRUE	TRUE	TRUE							
+372	Investor AB	Finance	Invest	EMEA		Own research		1						FALSE	FALSE	FALSE							
+377	Rubis	Energy	Oil / gas	EMEA	Cyclical	Sven		1						FALSE	FALSE	FALSE							
+381	Adidas	Consumer Goods	Clothing	EMEA		Sven		2		165	175	263	127	TRUE	TRUE	FALSE							
+385	LVMH	Consumer Goods	Luxury	EMEA		Joker		1						FALSE	FALSE	FALSE							
+396	Xiaomi	Technology	Telecommunications	Asia				2						FALSE	FALSE	FALSE							
+404	Toyota	Industrials	Auto	Asia		Own research		1						FALSE	FALSE	FALSE							
+416	China Mobile	Technology	Telecommunications	Asia		Sven / T21		2						FALSE	FALSE	FALSE							
+	A O Smith Corporation	Industrials	Heating	US		Own research		0		67	46	68	36	FALSE	TRUE	FALSE							
+	Applied Materials	Semiconductors	 equipment, services and software for the manufacture of semiconductor (integrated circuit) chips for electronics, flat panel displays for computers, smartphones, televisions, and solar products	US		Own research		0		112	107	159	81	FALSE	TRUE	FALSE							
+	Advanced Auto Parts	Industrials	Auto parts	US		Own research		0						FALSE	FALSE	FALSE							
+	Akami Technologies	Technology	Cybersecurity	US		Own research		0						FALSE	FALSE	FALSE							
+	Cognizant	Services	Consulting			Own research		0		60	63	93	50	TRUE	TRUE	FALSE							
+8	Vigo Systems	Industrials	Military	PL	Growth potential	Konrad Książak	Growth potential	3						FALSE	FALSE	FALSE							
+22	GRODNO	Industrials	Energy	PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+23	Livechat	Technology	Communication	PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+24	PKO BP	Finance	Banking	PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+35	Kęty	Industrials	Construction	PL		Konrad Książak		6						FALSE	FALSE	FALSE							
+37	TEN SQUARE GAMES	Technology	Gaming	PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+38	Asbis	Retail	Technology	PL		Konrad Książak		2						FALSE	FALSE	FALSE							
+44	Torpol	Industrials	Railways	PL		Konrad Książak		3						FALSE	FALSE	FALSE							
+51	Vercom	Technology	Communication	PL		Konrad Książak		2						FALSE	FALSE	FALSE							
+57	Mirbud	Industrials	Construction	PL		Konrad Książak		3						FALSE	FALSE	FALSE							
+60	Tarczyński	Food	Manufacturer	PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+64	Neuca	Health		PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+67	Big Cheese Studio	Technology	Gaming	PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+69	Apator	Industrials		PL		Konrad Książak		1						FALSE	FALSE	FALSE							
+78	Texas Instruments	Semiconductors	Analog electronics / Digital signal processors	US				2		166	121	149	101	FALSE	FALSE	FALSE							
+83	Amgen	Health	Pharma	US		Skhreli		2						FALSE	FALSE	FALSE							
+131	TROW	Finance	Invest	US		Own research		5		113	141	202	111	TRUE	TRUE	FALSE							
+134	Berkshire Hathaway	Finance	Invest	US				6		320	200	301	144	FALSE	FALSE	FALSE							
+165	United Natural Food	Food		US				1		27	18	62	-3	FALSE	TRUE	FALSE							
+173	Icahn Enterprises	Finance	Invest	US		Isfaaq		4						FALSE	FALSE	FALSE							
+185	Sprouts Farmers Market Inc.	Retail	Food	US		Sven		1						FALSE	FALSE	FALSE							
+193	Innovative Industrial Properties	REIT	Cannabis	US		FAST GRAPHS		5		70,74	112	182	83	TRUE	TRUE	TRUE							
+197	Footlocker	Retail	Clothing	US		Jimmy		1		41				FALSE	FALSE	FALSE							
+215	Nvidia	Technology	GPUs	US		Joker		2						FALSE	FALSE	FALSE							
+238	Seaboard	Food	Manufacturer	US		Own research		2						FALSE	FALSE	FALSE							
+259	Stanley Black Decker	Industrials	Equipment	US		Sven		7		79	70	120	50	FALSE	TRUE	FALSE							
+310	Skyworks Solutions	Semiconductors	Wireless communication technologies	US		Own research		1						FALSE	FALSE	FALSE							
+327	Accenture	Services	Consulting	US		Own research		1						FALSE	FALSE	FALSE							
+403	Samsung	Technology	Conglomerate	Asia		Own research		2						FALSE	FALSE	FALSE							
+370	Nestle	Consumer Goods	Conglomerate	EMEA		Own research		1						FALSE	FALSE	FALSE							
+SRTS	SENSUS HEALTHCARE INC	Health	Equipment	US		Own research		5															
+	Acomo	Retail	Spices	EMEA		Sven																	
+																							
+																							
+																							
+																							
